@@ -1,0 +1,12 @@
+---
+# tasks file for mebitech-ntp-role
+ - name: Install NTP  NANO  WGET Packages
+   yum: name={{item}} state=installed update_cache=true
+   with_items:
+    - nano
+    - wget 
+    - ntp
+    - libselinux-python
+ - name: Copy System Service Script
+   template: src=ntp.conf.j2 dest=/etc/ntp.conf owner=root group=root mode=0644
+   notify: Restart NTP 

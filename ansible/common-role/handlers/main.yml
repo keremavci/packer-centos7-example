@@ -1,0 +1,4 @@
+---
+# handlers file for mebitech-ntp-role
+ - name: Restart NTP 
+   service: name=ntpd state=restarted enabled=yes

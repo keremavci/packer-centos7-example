@@ -1,0 +1,3 @@
+*.box
+build/
+packer_cache/
