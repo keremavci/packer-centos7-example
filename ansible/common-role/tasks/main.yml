@@ -7,6 +7,6 @@
     - wget 
     - ntp
     - libselinux-python
- - name: Copy System Service Script
+ - name: Copy NTP Conf Template
    template: src=ntp.conf.j2 dest=/etc/ntp.conf owner=root group=root mode=0644
    notify: Restart NTP 
